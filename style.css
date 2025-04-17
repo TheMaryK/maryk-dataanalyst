@@ -48,11 +48,28 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
+  display: flex; /* Align items side by side */
+  align-items: center; /* Vertically center the items */
   background-color: #a5d6a7; /* light forest green */
   padding: 80px 40px;
-  text-align: center;
   border-radius: 20px;
   margin: 40px 20px;
+}
+
+.hero-text {
+  flex: 1; /* Allow text to take remaining space */
+}
+
+.hero-img {
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.hero-img img {
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Make it the same as width for a perfect circle */
+  border-radius: 50%; /* This makes the image circular */
+  object-fit: cover; /* Ensures the image is properly scaled inside the circle */
+  margin-right: 20px; /* Space between the image and the text */
 }
 
 .hero h2 {
