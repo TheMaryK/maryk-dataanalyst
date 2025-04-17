@@ -1,4 +1,4 @@
-/* Reset some default browser styles */
+/* Reset default browser styling */
 * {
   margin: 0;
   padding: 0;
@@ -7,114 +7,125 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4fdf7;
+  color: #333;
   line-height: 1.6;
-  background-color: #ffffff;
-  color: #2e2e2e;
-}
-
-/* Header Navigation */
-header {
-  background-color: #1b5e20; /* Deep forest green */
-  color: #fff;
-  padding: 20px 40px;
-}
-
-nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-nav h1 {
-  font-size: 24px;
-  font-weight: bold;
+/* Sidebar navigation styling */
+nav {
+  width: 250px;
+  background-color: #014421; /* Forest green */
+  padding: 30px 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  gap: 25px;
+  margin-top: 30px;
+}
+
+nav ul li {
+  margin-bottom: 15px;
 }
 
 nav ul li a {
   color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  color: #a8ffcc;
 }
 
-/* Hero Section */
-.hero {
-  background-color: #a5d6a7; /* light forest green */
-  padding: 80px 40px;
+/* Profile image & name at the top */
+.profile {
   text-align: center;
-  border-radius: 20px;
-  margin: 40px 20px;
+  margin-bottom: 30px;
 }
 
-.hero h2 {
-  font-size: 36px;
-  color: #1b5e20;
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #ffffff;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-top: 15px;
-  color: #2e2e2e;
+.profile h1 {
+  font-size: 22px;
+  margin: 0;
+  color: #fff;
 }
 
-/* Reusable Box Section (About, Skills) */
-.box-section {
-  background-color: #f1f8e9; /* very light green */
+/* Main content styling */
+main {
+  margin-left: 250px;
   padding: 40px;
-  margin: 40px 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
-.box-section h2 {
-  margin-bottom: 15px;
-  color: #1b5e20;
+/* Hero section */
+.hero {
+  background-color: #e0f3eb;
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.box-section p,
-.box-section li {
-  font-size: 16px;
+.hero-text {
+  max-width: 600px;
 }
 
-/* Skills List */
+.hero img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+/* Box styling for About & Skills */
+section#about,
+section#skills {
+  background-color: #e0f3eb;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
 #skills ul {
+  list-style-type: disc;
   padding-left: 20px;
 }
 
-#skills ul li {
-  margin-bottom: 10px;
-}
-
-/* Project Cards */
-#projects {
-  padding: 40px 20px;
-}
-
+/* Projects */
 .project-card {
-  background-color: #e8f5e9;
-  border-left: 5px solid #2e7d32;
+  background-color: #ffffff;
+  border-left: 4px solid #014421;
   padding: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .project-card h3 {
-  color: #1b5e20;
+  margin-bottom: 10px;
+  color: #014421;
 }
 
 .project-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #1b5e20;
+  color: #007f5f;
   text-decoration: none;
   font-weight: bold;
 }
@@ -123,46 +134,32 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Contact Section */
+/* Contact section */
 #contact {
-  background-color: #f1f8e9;
-  padding: 40px 20px;
-  margin: 40px 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-#contact h2 {
-  margin-bottom: 20px;
-  color: #1b5e20;
+  padding: 30px;
+  background-color: #e0f3eb;
+  border-radius: 12px;
+  margin-bottom: 30px;
 }
 
 #contact ul {
   list-style: none;
-  padding: 0;
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
+  gap: 20px;
+  padding: 0;
+  margin-top: 10px;
 }
 
 #contact li a img {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.3s;
-}
-
-#contact li a img:hover {
-  transform: scale(1.1);
+  width: 30px;
+  height: 30px;
 }
 
 /* Footer */
 footer {
-  background-color: #1b5e20;
-  color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   font-size: 14px;
-  margin-top: 40px;
+  color: #777;
 }
+
